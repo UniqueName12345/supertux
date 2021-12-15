@@ -1,4 +1,4 @@
-# SuperTux
+# SuperTux +
 
 [![Build](https://github.com/SuperTux/supertux/workflows/main/badge.svg?branch=master)](https://github.com/SuperTux/supertux/actions?query=workflow%3Amain)
 [![Github All Releases](https://img.shields.io/github/downloads/supertux/supertux/total.svg?maxAge=2592000)](https://github.com/SuperTux/supertux)
@@ -107,3 +107,12 @@ the Ghostree Level, are considered to be placeholders, because for the next vers
 great overhaul is planned with new features like reworked boss fights, graphics, and worlds.
 If you have some Constructive Feedback, Contributions or ideas to share, don't hestitate
 to contact us with one of the possibilities given above.
+
+## Supertux+
+SuperTux plus edition is an addition to vanilla SuperTux
+
+##New Features
+An edited logo!
+Changed up levels.
+Changed variables in certain places.
+More in the future.
