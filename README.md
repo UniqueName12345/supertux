@@ -1,10 +1,12 @@
-# SuperTux +
+# SuperTux+
 
 [![Build](https://github.com/SuperTux/supertux/workflows/main/badge.svg?branch=master)](https://github.com/SuperTux/supertux/actions?query=workflow%3Amain)
 [![Github All Releases](https://img.shields.io/github/downloads/supertux/supertux/total.svg?maxAge=2592000)](https://github.com/SuperTux/supertux)
 
 SuperTux is a jump'n'run game with strong inspiration from the
 Super Mario Bros. games for the various Nintendo platforms.
+
+SuperTux+ is a joke "addon" for SuperTux that is just weird because it is. No questioning!
 
 Run and jump through multiple worlds, fighting off enemies by jumping
 on them, bumping them from below or tossing objects at them, grabbing
@@ -33,22 +35,14 @@ save his beloved Penny, he begins his journey.
 
 ## Installation
 
-For major platforms, stable releases are built and available for download from
-[supertux.org](https://www.supertux.org/download.html) or alternatively directly
-from [GitHub](https://github.com/SuperTux/supertux/releases). You should be able
-to install these using default tools provided by your platform. On macOS, when
-Gatekeeper is enabled (default) it will refuse to open SuperTux. This is due to
-the lack of a signature on the application. If you wish to open SuperTux anyway
-without disabling the Gatekeeper feature entirely, you can open the application
-from the context menu (control click on the icon). macOS will then remember your
-choice the next time.
+Figure how to install SuperTux+ yourself, or ask on help in an issue enough times as a group team to beg me to make a release for this addon.
 
 ## Documentation
 
 Important documentation for SuperTux is contained in multiple files.
 Please see them:
 
-* `INSTALL.md` - Requirements, compiling and installing.
+* `INSTALL.md` - Requirements, compiling and installing. (now 69x better (and less functional)!
 * `README.md` - This file
 * `NEWS.md` - Changes since the previous versions of SuperTux.
 * `LICENSE.txt` - The GNU General Public License, under whose terms SuperTux is
@@ -109,7 +103,7 @@ If you have some Constructive Feedback, Contributions or ideas to share, don't h
 to contact us with one of the possibilities given above.
 
 ## Supertux+
-SuperTux plus edition is an addition to vanilla SuperTux
+SuperTux plus edition is an addition to vanilla SuperTux, with some (dare I say itj new and awesome features! (Totally a joke project, by the way. It maybe works, do not put minor bugs in the issues box, ONLY feature requests or major gamebreaking bugs.)
 
 ## New Features
 An edited logo!
