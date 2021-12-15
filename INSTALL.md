@@ -1,4 +1,4 @@
-Install instructions for SuperTux - <https://supertux.org/>
+Install instructions for SuperTux/SuperTux+ - <https://supertux.org/>
 ====================================================================
 Last update: September 2, 2016
 
@@ -37,7 +37,7 @@ distributions.
 * OpenGL headers and libraries: OpenGL libraries and headers are
   specific to your graphics card. Make sure that you have hardware
   accelerated OpenGL drivers installed. Software renderers like Mesa
-  will make SuperTux unplayable slow.
+  will make SuperTux unplayably slow.
 * [SDL2](http://www.libsdl.org) (2.0.1 or later)
 * [SDL2_image](http://www.libsdl.org/projects/SDL_image) (2.0.0 or later)
 * [OpenAL](http://www.openal.org): (1.0 or later)
@@ -139,36 +139,18 @@ developers.
 
 ### Notes for GIT users
 
-SuperTux does not need to be installed on the system;
-you can run it from its own directory.
-
-If `ccache` is installed and working,
-it can help to signigicantly reduce the (re)compilation time,
-e.g. when doing a git bisect with many checkouts.
-Furthermore, it is possible to reduce the optimization level to O1,
-which may reduce compilation times:
-```
-cmake .. -DWARNINGS=ON -DCMAKE_CXX_FLAGS="-O1"
-```
-
-A general way to reduce compilation time is running `make` with multiple
-threads:
-```
-make -j $(nproc || sysctl -n hw.ncpu || echo 2)
-```
-
+Why use GIT? For a joke "addon" to SuperTux? Seriously, why?
 
 Installing under Windows using CMake and Visual Studio
 ------------------------------------------------------
-To build SuperTux on Windows with Visual Studio you need to have CMake and a
-recent version of Visual Studio installed. Visual Studio 2015 Community Edition
-is known to work fine.
+To build SuperTux on Windows with Vim you need to have CMake and a
+recent version of Vim installed. Vim v0.1 is known to work fine.
 
 Because it's difficult to build and download all the dependencies per hand on windows,
 SuperTux provides a [dependency package](https://download.supertux.org/builddep/)
 that should contain all headers and libraries needed to build SuperTux on Windows.
 
-1. Unpack the SuperTux source pack or get the source with git (`git clone --recursive https://github.com/SuperTux/supertux.git`).
+1. Unpack the SuperTux/SuperTux+ source pack or get the source with git (`git clone --recursive https://github.com/SuperTux/supertux.git`).
 
 2. Extract the [dependency package](https://download.supertux.org/builddep/)
 into the source directory, so the `dependencies` folder is besides the `src` folder.
@@ -177,11 +159,13 @@ into the source directory, so the `dependencies` folder is besides the `src` fol
 
 4. Open a console window and navigate to the `build` directory.
 
-5. Run `cmake ..` to create the VS solution that builds SuperTux with standard options.
+5. Run `cmake ..` to create the Vim solution that builds SuperTux with standard options.
 For more CMake options, look at end of the Linux/UNIX build section.
 
 5. Open the new Visual Studio solution `SUPERTUX.sln` in the `build` directory.
 
 6. Build the project.
 
-7. Now you can run SuperTux using the run_supertux.bat file
+7. Now you can run SuperTux/SuperTux+ using the run_supertux.bat file!
+(does not work on Emacs)
+
