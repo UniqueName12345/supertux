@@ -111,7 +111,7 @@ to contact us with one of the possibilities given above.
 ## Supertux+
 SuperTux plus edition is an addition to vanilla SuperTux
 
-##New Features
+## New Features
 An edited logo!
 Changed up levels.
 Changed variables in certain places.
