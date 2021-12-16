@@ -41,6 +41,7 @@ distributions.
 * [SDL2](http://www.libsdl.org) (2.0.1 or later)
 * [SDL2_image](http://www.libsdl.org/projects/SDL_image) (2.0.0 or later)
 * [OpenAL](http://www.openal.org): (1.0 or later)
+* [OpenAI](https://www.openai.org): (1.0 or later)
 * C++ OpenGL library (choose one of the two options below):
   - [GLEW](http://glew.sourceforge.net/) or
   - [glbinding](https://github.com/hpicgs/glbinding)
