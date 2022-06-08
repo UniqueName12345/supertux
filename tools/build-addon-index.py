@@ -36,26 +36,25 @@ class Addon:
     def __init__(self, filename):
         lst = sexpr.parse(filename)
         if lst[0][0] != "supertux-addoninfo":
-            raise Exception("not a supertux-addoninfo: %s" % lst[0][0])
-        else:
-            for k, v in lst[0][1:]:
-                if k == "id":
-                    self.id = v
-                elif k == "version":
-                    self.version = int(v)
-                elif k == "type":
-                    self.type = v
-                elif k == "title":
-                    self.title = v
-                elif k == "author":
-                    self.author = v
-                elif k == "license":
-                    self.license = v
-                else:
-                    raise Exception("unknown tag: %s" % k)
+            raise Exception(f"not a supertux-addoninfo: {lst[0][0]}")
+        for k, v in lst[0][1:]:
+            if k == "id":
+                self.id = v
+            elif k == "version":
+                self.version = int(v)
+            elif k == "type":
+                self.type = v
+            elif k == "title":
+                self.title = v
+            elif k == "author":
+                self.author = v
+            elif k == "license":
+                self.license = v
+            else:
+                raise Exception(f"unknown tag: {k}")
 
-            self.md5 = ""
-            self.url = ""
+        self.md5 = ""
+        self.url = ""
 
     def write(self, fout):
         fout.write("  (supertux-addoninfo\n")
@@ -75,7 +74,7 @@ def process_addon(fout, addon_dir, nfo, base_url, zipdir):
     with open(nfo) as fin:
         addon = Addon(fin.read())
 
-    zipfile = addon.id + "_v" + str(addon.version) + ".zip"
+    zipfile = f"{addon.id}_v{str(addon.version)}.zip"
 
     # see http://pivotallabs.com/barriers-deterministic-reproducible-zip-files/
     os.remove(os.path.join(zipdir, zipfile))
@@ -99,9 +98,9 @@ def generate_index(fout, directory, base_url, zipdir):
             # print(addon_dir)
             nfos = glob.glob(os.path.join(addon_dir, "*.nfo"))
             if len(nfos) == 0:
-                raise Exception(".nfo file missing from %s" % addon_dir)
+                raise Exception(f".nfo file missing from {addon_dir}")
             elif len(nfos) > 1:
-                raise Exception("to many .nfo files in %s" % addon_dir)
+                raise Exception(f"to many .nfo files in {addon_dir}")
             else:
                 try:
                     process_addon(fout, addon_dir, nfos[0], base_url, zipdir)

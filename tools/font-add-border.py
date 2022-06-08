@@ -37,8 +37,8 @@ def fix_font_file(filename, glyph_width, glyph_height):
 
     out = Image.new("RGBA", (w_g * (glyph_width + 2), h_g * (glyph_height + 2)), color=5)
 
-    for y in range(0, h_g):
-        for x in range(0, w_g):
+    for y in range(h_g):
+        for x in range(w_g):
             ix = x * glyph_width
             iy = y * glyph_height
 
@@ -50,7 +50,7 @@ def fix_font_file(filename, glyph_width, glyph_height):
 
     with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as f:
         out.save(f)
-        print("File saved as %s" % f.name)
+        print(f"File saved as {f.name}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='rFactor MAS packer')
