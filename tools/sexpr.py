@@ -50,17 +50,12 @@ def parse(text):
             elif c.isdigit():
                 state = 'number'
                 atom = c
-            elif c.isspace():
-                pass
-            else:
+            elif not c.isspace():
                 raise Exception("%d:%d: error: unexpected character: '%s'" % (line, column, c))
 
         elif state == 'comment':
             if c == '\n':
                 state = 'list'
-            else:
-                pass
-
         elif state == 'string':
             if c == "\\":
                 i += 1
